@@ -69,3 +69,9 @@ def get_fruits():
 
 #打印出的结果里是包含'Apple'元素的
 #Banana,Mango,Orange,Apple
+print(','.join(get_fruits()))
+
+#下面的例子里beg 装饰了say
+#Beg 会调用say.如果say_please 是True 那么bey 回修改say的返回值
+#message
+
