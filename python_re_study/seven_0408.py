@@ -66,5 +66,6 @@ def add_apples(func):
 @add_apples
 def get_fruits():
         return ['Banana','Mango','Orange']
-        
-        
+
+#打印出的结果里是包含'Apple'元素的
+#Banana,Mango,Orange,Apple
