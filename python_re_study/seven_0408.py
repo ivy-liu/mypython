@@ -74,4 +74,21 @@ print(','.join(get_fruits()))
 #下面的例子里beg 装饰了say
 #Beg 会调用say.如果say_please 是True 那么bey 回修改say的返回值
 #message
+from functools import wraps
 
+def beg (target_function):
+        @wraps(target_function)
+        def wraps(*args,**kwargs):
+                msg,say_please=target_function(*args,**kwargs)
+                if say_please:
+                        return("{} {}".format(msg,"Please! I am poor :("))
+                return msg
+        #return wrapper
+
+@beg
+def say(say_please=False):
+        msg="Can you buy me a beer?"
+        return msg,say_please
+
+print (say()) #Can you buy me a beer?
+print (say(say_please=True)) #Can you buy me a beer? Please! I am poor :("
