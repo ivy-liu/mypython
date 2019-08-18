@@ -1,12 +1,13 @@
 
 *Python 绝对路径引用
-===
+---
 * 问题：  
 Python开发时经常出现找不到import对象的问题，ImportError: No module named xxx，一般的原因不外乎  
   
 未安装对应依赖  
 引用对象的文件夹下缺失 __init__.py文件  
 由于通过相对路径的加载，导致找不到object  
+  
 * 解决方法  
 针对原因1和2通过安装依赖和添加__init__.py文件即可。原因3我们的解决方法是把相对路径的import改为绝对路径。  
 
